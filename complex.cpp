@@ -11,6 +11,10 @@ complex::complex(const int& r)
     im = 0;
 }
 ostream& operator<<(ostream& os ,complex c){
+    if(c.im<0){
+        os<<c.re<<c.im<<"i";
+        return os;
+    }
     os<<c.re<<"+"<<c.im<<"i";
     return os;
 }
